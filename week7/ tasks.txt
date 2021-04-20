@@ -1,0 +1,27 @@
+Нека имате структурата:
+
+struct node_t{  
+    struct node_t* left;
+    struct node_t* right;
+    int data;
+
+};
+която представлява двуично наредено дърво
+напишете функции:
+
+    void add_leaf(struct node_t *root, int data) - добавя елемент
+    void free_tree(struct node_t *root) - трие дърво
+    int balanced(struct node_t* root) - проверява дали едно дърво е балансирано(лявото и дясното поддърво на всяко негово поддърво имат разлика във височините, не по-голяма от 1)
+    За целта напишете функция, намираща височината на дърво и използвайки нея проверявайте разликата на височините на поддърветата
+    void printLevel(struct node_t* leaf, int level) - принтира всички node-ве на дадено ниво
+    int countPathsWithsum(struct node_t* leaf, int targetSum) - брои колко пътища от корена до някое от листата на дърво имат сума на data-та
+    targetSum
+    struct node_t* lowest_common_ancestor(struct node_t* n1, struct node_t *n2, struct node_t* root) - намира най-ниския общ предшественик на n1 и n2
+    Например:
+         n4
+        / \
+     n6   n3
+            / \
+         n1   n2
+    най-ниският общ предшественик на n1 и n2 е n3, а този за n2 и n6 е n4
+    struct node_t* k_smallest_element(struct node_t *root, int k) - намира к-я най-малък елемент на дървото
